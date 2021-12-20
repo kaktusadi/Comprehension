@@ -60,3 +60,31 @@ weather_c = {
 weather_f = {day:(temp_c*9/5) + 32 for (day, temp_c) in weather_c.items()}
 
 print(weather_f)
+######################################################################
+
+# write same numbers in 1 and 2
+with open("file1.txt") as file1:
+    file1_data = file1.readlines()
+
+with open("file2.txt") as file2:
+    file2_data = file2.readlines()
+
+#result = [new_item for item in list if test]
+result = [int(num) for num in file1_data if num in file2_data]
+
+# Write your code above 👆
+
+print(result)
+
+#########################################################################
+
+sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+
+# for word in sentence.split():
+#     print(word)
+
+result = {word:len(word) for word in sentence.split()}
+
+print(result)
+
+#########################################################################
